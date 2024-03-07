@@ -120,12 +120,20 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 7.0.0"></he
 <p>V自身的 n次积记为:<br>$$<br>V_n&#x3D;V V…V<br>$$<br>V^0&#x3D;{ε}<br>V*是V的闭包： V*&#x3D;V0∪V1∪V2∪V3∪…   比V+多了一个ε<br>V+是V的正规闭包：V＋＝V V*</p>
 <p>上下文无关文法G是一个四元组<br>         G&#x3D;(VT，VN，S，P)，其中<br>VT：终结符(Terminal)集合(非空)</p>
 <blockquote>
-<p>基本字、标识符、常数、算符和界符等。</p>
+<p>基本字、标识符、常数、算符和界符等。小写字母表示。</p>
 </blockquote>
 <p>VN：非终结符(Noterminal)集合(非空)，且VT ∩VN&#x3D;Ø</p>
 <blockquote>
-<p>算术表达式、布尔表达式、赋值句、分程序、过程等。一个非终结符是一个类或集合记号，而不是一个个体的记号。每个非终结符表示一定符号串的集合（由终结符和非终结符组成的符号串）。</p>
+<p>算术表达式、布尔表达式、赋值句、分程序、过程等。一个非终结符是一个类或集合记号，而不是一个个体的记号。每个非终结符表示一定符号串的集合（由终结符和非终结符组成的符号串）。大写字母表示。</p>
 </blockquote>
 <p>S：文法的开始符号，S∈VN<br>P：产生式集合(有限)，每个产生式形式为<br>P-&gt;α， P∈VN， α∈ (VT ∪ VN)*<br><strong>开始符S至少必须在某个产生式的左部出现一次</strong>。</p>
 <p>开始符号是一个特殊的非终结符。</p>
+<p>假定G是一个文法，S 是它的开始符号。<br>如果S⇒*α，则称α是一个<strong>句型</strong>。<br><strong>仅含终结符号</strong>的句型是一个<strong>句子</strong>。<br>文法G所产生的句子的全体是一个语言，记为 L(G):<br>$$<br>L(G)&#x3D;{α│S⇒+α，α∈V_T^∗}<br>$$<br>αAβ⇒αγβ仅当A-&gt;γ是一个产生式，且α，β∈(VT ∪ VN)*    <strong>称为αAβ直接推出αγβ</strong></p>
+<p>若存在一个从α1至αn的推导，则称α1可推导出αn。</p>
+<p><strong>α1⇒+β</strong>表示：从α1出发，<strong>经一步或若干步</strong>，可推导出β。</p>
+<p><strong>α1⇒*β</strong>表示：从α1出发，<strong>经零步或若干步</strong>，可推导出β。</p>
+<p><strong>α1⇒*β意味着α1⇒+αn或α1&#x3D;β</strong></p>
+<p><strong>最左推导</strong>：任何一步α⇒ β都是对α中的<strong>最左</strong>非终结符进行替换。<br><strong>最右推导</strong>：任何一步α ⇒ β都是对α中的<strong>最右</strong>非终结符进行替换。</p>
+<p><strong>语法树</strong>：用一张图表示一个句型的推导,称为语法树。<br>一棵语法树是不同推导过程的<strong>共性</strong>抽象。</p>
+<p><img src="/pic/yufashuS.png" alt="语法树"></p>
 </div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/圆角-author.png" alt="avatar"></div><p class="sidebar-ov-author__text">很喜欢CSers的一句话：啊？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>adattack</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v7.0.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
