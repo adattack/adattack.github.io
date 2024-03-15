@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<title>clock</title>
+
+<head>
+    <meta charset="=UTF-8">
+    <style>
+         #div_raindrops{
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .raindrops_item{
+                position: absolute;
+                width: 5px;
+                height: 30px;
+                border-radius: 0% 0% 5px 5px;
+                transform: translateY(-200px);
+                animation-name: raindrops;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes raindrops{
+                from {transform: translateY(-200px);}
+                to {transform: translateY(100vh);}
+            }
+        .card-outer-circle {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(#000d43, #dec802, #ff00e0);
+            border-radius: 50%;
+            animation: rotate 1.5s linear infinite;
+            mask: radial-gradient(circle, #fff 10%, #ca0a0a 100%);
+            left:5px;
+        }
+        .card-outer-circle span {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(#12e828, #e8e4be, #e400c9);
+            border-radius: 50%;
+        }
+        .outer-circle {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+            border-radius: 50%;
+            animation: rotate 1.5s linear infinite;
+            z-index: -1;
+            margin: auto;
+            margin-top: 85px;
+            margin-left: 433px;
+        }
+        .outer-circle span {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+            border-radius: 50%;
+
+        }
+        .card-inner-circle {
+            height: 15px;
+            width: 15px;
+            position: relative;
+            background: rgb(255, 255, 255);
+             top: 3px;
+            left: 2.4px; 
+            border-radius: 50%;
+            z-index: 9;
+        }
+        span:nth-child(1) {
+            filter: blur(5px);
+        }
+
+        span:nth-child(2) {
+            filter: blur(10px);
+        }
+
+        span:nth-child(3) {
+            filter: blur(25px);
+        }
+
+        span:nth-child(4) {
+            filter: blur(150px);
+        }
+
+
+        @keyframes rotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            } 
+        }
+        #wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 360px;
+            width: 360px;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: #000000;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        .starfield {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            -moz-transform: translate(-50%, -50%) translateZ(0);
+            -webkit-transform: translate(-50%, -50%) translateZ(0);
+            -ms-transform: translate(-50%, -50%) translateZ(0);
+            transform: translate(-50%, -50%) translateZ(0);
+        }
+
+        .starfield__stars {
+            position: absolute;
+            left: 0;
+            top: -600px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .starfield.small .starfield__stars {
+            width: 1px;
+            height: 1px;
+            box-shadow: 489px 468px #FFF, 364px 571px #FFF, 43px 463px #FFF, 209px 205px #FFF, 59px 60px #FFF, 473px 456px #FFF, 208px 391px #FFF, 518px 463px #FFF, 255px 131px #FFF, 582px 331px #FFF, 165px 297px #FFF, 32px 70px #FFF, 585px 302px #FFF, 532px 459px #FFF, 242px 453px #FFF, 85px 389px #FFF, 282px 598px #FFF, 554px 250px #FFF, 347px 299px #FFF, 93px 352px #FFF, 179px 106px #FFF, 119px 572px #FFF, 405px 248px #FFF, 88px 57px #FFF, 228px 135px #FFF, 519px 302px #FFF, 94px 260px #FFF, 57px 111px #FFF, 450px 4px #FFF, 5px 544px #FFF, 321px 589px #FFF, 438px 298px #FFF, 399px 319px #FFF, 278px 551px #FFF, 134px 468px #FFF, 481px 318px #FFF, 253px 14px #FFF, 53px 33px #FFF, 229px 248px #FFF, 393px 386px #FFF, 490px 96px #FFF, 392px 109px #FFF, 180px 49px #FFF, 537px 174px #FFF, 204px 317px #FFF, 27px 408px #FFF, 571px 580px #FFF, 512px 410px #FFF, 288px 280px #FFF, 168px 504px #FFF, 214px 148px #FFF, 283px 43px #FFF, 221px 368px #FFF, 582px 89px #FFF, 445px 334px #FFF, 4px 455px #FFF, 185px 392px #FFF, 198px 260px #FFF, 202px 91px #FFF, 145px 558px #FFF, 90px 110px #FFF, 346px 473px #FFF, 25px 238px #FFF, 159px 457px #FFF, 468px 549px #FFF, 466px 106px #FFF, 298px 222px #FFF, 428px 477px #FFF, 433px 169px #FFF, 344px 582px #FFF, 207px 527px #FFF, 333px 381px #FFF, 51px 383px #FFF, 415px 590px #FFF, 268px 238px #FFF, 337px 93px #FFF, 536px 584px #FFF, 169px 31px #FFF, 343px 37px #FFF, 33px 258px #FFF, 337px 577px #FFF, 115px 408px #FFF, 566px 552px #FFF, 518px 41px #FFF, 480px 254px #FFF, 288px 140px #FFF, 14px 381px #FFF, 482px 185px #FFF, 83px 252px #FFF, 33px 326px #FFF, 175px 87px #FFF, 502px 551px #FFF, 171px 58px #FFF, 33px 133px #FFF, 266px 294px #FFF, 522px 120px #FFF, 119px 559px #FFF, 227px 378px #FFF, 423px 536px #FFF, 260px 230px #FFF;
+        }
+
+        .starfield.medium .starfield__stars {
+            width: 2px;
+            height: 2px;
+            box-shadow: 83px 561px #FFF, 299px 500px #FFF, 422px 71px #FFF, 191px 473px #FFF, 265px 582px #FFF, 49px 588px #FFF, 574px 142px #FFF, 205px 94px #FFF, 185px 392px #FFF, 25px 148px #FFF, 27px 102px #FFF, 199px 543px #FFF, 37px 51px #FFF, 78px 212px #FFF, 227px 155px #FFF, 218px 25px #FFF, 186px 556px #FFF, 82px 506px #FFF, 477px 568px #FFF, 586px 165px #FFF, 557px 304px #FFF, 311px 210px #FFF, 37px 1px #FFF, 575px 24px #FFF, 262px 150px #FFF, 321px 551px #FFF, 285px 548px #FFF, 115px 141px #FFF, 414px 590px #FFF, 132px 201px #FFF, 7px 291px #FFF, 438px 437px #FFF, 469px 350px #FFF, 127px 394px #FFF, 179px 539px #FFF, 145px 427px #FFF, 168px 576px #FFF, 67px 580px #FFF, 370px 494px #FFF, 243px 176px #FFF;
+        }
+
+        .starfield.large .starfield__stars {
+            width: 3px;
+            height: 3px;
+            box-shadow: 464px 394px #FFF, 98px 87px #FFF, 271px 211px #FFF, 121px 274px #FFF, 530px 259px #FFF, 226px 448px #FFF, 480px 198px #FFF, 358px 460px #FFF, 161px 479px #FFF, 214px 127px #FFF, 432px 186px #FFF, 525px 166px #FFF, 118px 206px #FFF, 448px 522px #FFF, 150px 207px #FFF;
+        }
+
+        .starfield.small .starfield__stars:nth-child(1) {
+            -moz-animation: stars 20s linear infinite;
+            -webkit-animation: stars 20s linear infinite;
+            animation: stars 20s linear infinite;
+        }
+
+        .starfield.medium .starfield__stars:nth-child(1) {
+            -moz-animation: stars 30s linear infinite;
+            -webkit-animation: stars 30s linear infinite;
+            animation: stars 30s linear infinite;
+        }
+
+        .starfield.large .starfield__stars:nth-child(1) {
+            -moz-animation: stars 50s linear infinite;
+            -webkit-animation: stars 50s linear infinite;
+            animation: stars 50s linear infinite;
+        }
+
+        .starfield.small .starfield__stars:nth-child(2) {
+            -moz-animation: stars 20s linear infinite 10s;
+            -webkit-animation: stars 20s linear infinite 10s;
+            animation: stars 20s linear infinite 10s;
+        }
+
+        .starfield.medium .starfield__stars:nth-child(2) {
+            -moz-animation: stars 30s linear infinite 15s;
+            -webkit-animation: stars 30s linear infinite 15s;
+            animation: stars 30s linear infinite 15s;
+        }
+
+        .starfield.large .starfield__stars:nth-child(2) {
+            -moz-animation: stars 50s linear infinite 25s;
+            -webkit-animation: stars 50s linear infinite 25s;
+            animation: stars 50s linear infinite 25s;
+        }
+
+        @keyframes stars {
+            0% {
+                -moz-transform: translateY(0) translateZ(0);
+                -webkit-transform: translateY(0) translateZ(0);
+                -ms-transform: translateY(0) translateZ(0);
+                transform: translateY(0) translateZ(0);
+            }
+
+            100% {
+                -moz-transform: translateY(2000px) translateZ(0);
+                -webkit-transform: translateY(2000px) translateZ(0);
+                -ms-transform: translateY(2000px) translateZ(0);
+                transform: translateY(2000px) translateZ(0);
+            }
+        }
+
+        body {
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        clock {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            height: 320px;
+            font-size: 24px;
+            border-radius: 200px;
+            /* box-shadow: 2px 2px 20px rgba(0, 0, 0, .1); */
+            --step: 60s;
+            background-color: rgb(0, 0, 0);
+        }
+
+        clock::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: repeating-conic-gradient(from -.5deg, #333 0 1deg, transparent 0deg 30deg), repeating-conic-gradient(from -.5deg, #ccc 0 1deg, transparent 0deg 6deg);
+            mask: radial-gradient(transparent 145px, red 0);
+        }
+
+        clock-pane {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            z-index: 100;
+        }
+
+        num {
+            position: absolute;
+            offset-path: path('M250 125c0 69.036-55.964 125-125 125S0 194.036 0 125 55.964 0 125 0s125 55.964 125 125z');
+            offset-distance: calc(var(--i) * 10% / 1.2 - 25%);
+            offset-rotate: 0deg;
+            text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+            color: whitesmoke;
+        }
+
+        hour {
+            position: absolute;
+            width: 4px;
+            height: 60px;
+            background: #ffffff;
+            transform-origin: center bottom;
+            transform: translateY(-50%) rotate(0);
+            animation: clock calc(var(--step) * 60 * 12) infinite linear;
+            animation-delay: calc(-1 * var(--step) * var(--dh) * 60);
+        }
+
+        min {
+            position: absolute;
+            width: 4px;
+            height: 90px;
+            background: #ffffff;
+            transform-origin: center bottom;
+            transform: translateY(-50%) rotate(0);
+            animation: clock calc(var(--step) * 60) infinite linear;
+            animation-delay: calc(-1 * var(--step) * var(--dm));
+        }
+
+        sec {
+            position: absolute;
+            width: 2px;
+            height: 120px;
+            background: red;
+            transform-origin: center bottom;
+            transform: translateY(-50%) rotate(0);
+            animation: clock var(--step) infinite steps(60);
+            animation-delay: calc(-1 * var(--step) * var(--ds) / 60);
+        }
+
+        sec::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 50%;
+            bottom: 0;
+            background: #fff;
+            border: 4px solid #333;
+            transform: translate(-50%, 50%);
+        }
+
+        @keyframes clock {
+            to {
+                transform: translateY(-50%) rotate(360deg);
+            }
+        }
+
+
+        .float-gradient {
+            background: linear-gradient(-45deg, #990066, #FFCC00, #CC0033);
+            background-size: 500% 500%;
+            animation: moiveAnimation 15s infinite;
+        }
+
+        @keyframes moiveAnimation {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        .card *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+        .card{
+            position: absolute;
+            margin-top: 600px;
+            margin-left: 200px;
+            height: 400px;
+        }
+        ul {
+            display: flex;
+            margin: 10px 0 0 10px;
+            float: left;
+            width: 80px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+
+        li {
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left:5px;
+        }
+
+        .ul1 {
+            justify-content: center;
+
+        }
+
+        .ul1>li {
+            align-self: center;
+        }
+
+        .ul2 {
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .ul5 {
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        .ul5 li:nth-child(3) {
+            margin: 4px 20px;
+            padding-right: 7px;
+        }
+    </style>
+</head>
+<div id = "div_raindrops">
+    <div class = "raindrops_item"></div>
+</div>
+<body class="float-gradient">
+    <div class="outer-circle"></div>
+    <clock id="clock" style=" background-color:rgba(15, 15, 15, 0.1);" >
+        <clock-pane>
+            <num style="--i:1">1</num>
+            <num style="--i:2">2</num>
+            <num style="--i:3">3</num>
+            <num style="--i:4">4</num>
+            <num style="--i:5">5</num>
+            <num style="--i:6">6</num>
+            <num style="--i:7">7</num>
+            <num style="--i:8">8</num>
+            <num style="--i:9">9</num>
+            <num style="--i:10">10</num>
+            <num style="--i:11">11</num>
+            <num style="--i:12">12</num>
+        </clock-pane>
+        <hour></hour>
+        <min></min>
+        <sec></sec>
+    </clock>
+    <div id="wrap">
+        <div class="starfield small">
+            <div class="starfield__stars"></div>
+            <div class="starfield__stars"></div>
+            <div class="starfield__stars"></div>
+            <div class="starfield__stars"></div>
+        </div>
+        <div class="starfield medium">
+            <div class="starfield__stars"></div>
+            <div class="starfield__stars"></div>
+        </div>
+        <div class="starfield large">
+            <div class="starfield__stars"></div>
+            <div class="starfield__stars"></div>
+        </div>
+    </div>
+    <div></div>
+    <div class="card" >
+        <ul class="ul2">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul1">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul></ul>
+        <ul class="ul5">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul></ul>
+        <ul class="ul1">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul></ul>
+        <ul class="ul2">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul></ul>
+        <ul class="ul5">
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-outer-circle">
+                    <div class="card-inner-circle"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const d = new Date()
+    const h = d.getHours();
+    const m = d.getMinutes();
+    const s = d.getSeconds();
+    clock.style.setProperty('--ds', s)
+    clock.style.setProperty('--dm', m + s / 60)
+    clock.style.setProperty('--dh', h + m / 60 + s / 3600)
+    const div_raindrops = document.getElementById('div_raindrops');
+            for(var i = 0; i < div_raindrops.clientWidth / 5; i++){
+                var raindrops_item = document.createElement('div');
+                raindrops_item.className = 'raindrops_item';
+                raindrops_item.style.backgroundImage = 'linear-gradient(transparent,rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + '))';
+                raindrops_item.style.animationDelay = Math.random() * 10 + 's';
+                raindrops_item.style.left = i * 5 + 'px';
+                raindrops_item.style.animationTimingFunction = 'cubic-bezier(' + (Math.random() * 0.4 + 0.6) + ',' + (Math.random() * 0.2) + ',' + (Math.random() * 0.2 + 0.8) + ',' + (Math.random() * 0.2 + 0.4) + ')';
+                div_raindrops.append(raindrops_item);
+            }
+</script>
+
+</html>
