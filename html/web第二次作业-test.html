@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Bootstrap 模板</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+      <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+        <style>
+            body{
+                margin: 0;
+                display: flexbox;
+            }
+            #head{
+                position: relative;
+            }
+            #banner{
+                z-index: -1;
+            }
+            #startwords1{
+                z-index: 1;
+                position:absolute;
+                left: 30%;
+                top: 30%;
+                color: white;
+                font-size: 40px;
+            }
+            #loginbtn{
+                position: absolute;
+                background: rgba(255, 255, 255, 0);
+                border: white 1px solid;
+                color: white;
+                border-radius: 10%;
+                left:88%;
+                top:2%;
+                }
+            #registerbtn{
+                position: absolute;
+                background: rgba(255, 255, 255, 0);
+                border: white 1px solid;
+                color: white;
+                border-radius: 10%;
+                left:94%;
+                top:2%;
+            }
+            #studybtn{
+                z-index: 1;
+                position: absolute;
+                background-color: white;
+                border: white;
+                color: rgb(0, 128, 255);
+                left:45%;
+                top:70%;
+                border-radius: 10px;
+            }
+            #startwords2{
+                z-index: 1;
+                position:absolute;
+                left: 30%;
+                top: 50%;
+                color: white;
+                font-size: 20px;
+            }
+            #svg{
+                position: absolute;
+                height: auto;
+                left:8%;
+                scale: 0.8;
+            }
+            #-lab{
+               background-color: whitesmoke;
+            }
+            #lab-text{
+               background-color: whitesmoke;
+               width: 100%;
+               height: max-content;
+               padding-left: 20px;
+            }
+            #lab-text-title{
+                margin-top: 10px;
+                left: 5%;
+                font: bold 50px Arial;
+               }
+            #lab-text-content{
+               /* top:180%; */
+               margin-top: 10px;
+               left:5%;
+               font: 20px Arial;
+            }
+            #learnmore{
+               margin-top: 20px;
+               border: gray 1px solid;
+               align-self:center;
+               column-gap: 6;
+               background-color: whitesmoke;
+               color: gray;
+               width: 1150px;
+            }
+            #twostudy-title{
+                margin-top: 10px;
+                left: 5%;
+                font: bold 50px Arial;
+               }
+            #twostudy-content{
+               /* top:180%; */
+               margin-top: 10px;
+               left:5%;
+               font: 20px Arial;
+            }
+            #course-title{
+               font:bold 40px Arial;
+            }
+            #icon1-backgroud{
+                background-color: rgb(98, 169, 245);
+                width:7em; 
+                height:7em;
+                border-radius: 10px;
+            }
+            #icon1{
+               position: absolute;
+               padding-left: 10px;
+               padding-top: 13px;
+               stroke: white;
+               fill:white;
+               background: transparent;
+               stroke-width: 0.4;
+   
+            }
+            #icon1-text{
+                position: absolute; 
+                left: 20%;
+                font:bold 40px Arial;
+            }
+            #icon1-content{
+                position: absolute; 
+                left: 20%;
+                font: 20px Arial;
+                margin-top: 60px;
+            }
+            #learn{
+               margin-left: 17%;
+               text-decoration-line: underline;
+            }
+            #icon2{
+               position: absolute;
+               padding-left: 10px;
+               padding-top: 13px;
+            }
+            #footer{
+                background-color: whitesmoke;
+                height: 100px;
+            }
+
+        </style>
+   </head>
+   <body>
+    <div id="head" class="container-fluid">
+         <div class="row">
+            <img id="svg" src="/images/jave-web/第二次java作业/logo-white.svg" class="img-responsive">  
+            <div class="col">
+            <button type="button" id="loginbtn" class="btn btn-default">登陆</button>
+            <button type="button" id="registerbtn"  class="btn btn-default">注册</button>
+            </div>      
+         </div>
+         <div class="row">
+            <div class="col">
+               <div id="startwords1" class="row1">云端编程，浏览器里边学边练</div>
+               <div id="startwords2" class="row2">软件定义一切，网络连接时空，学习软件技术，创造未来世界。</div>
+            </div>
+         </div>
+        <img  id=" banner" src="./home-banner@2x.jpg" class="img-responsive">
+        <div class="row3">
+         <button type="button" id="studybtn" class="btn btn-default btn-lg">马上学习</button>
+        </div>
+    </div>
+    <div  id="-lab" class="container-fluid">
+         <div class="container">
+            <div class="row">
+               <img id="lab" src="./img-lab@2x.png" class="img-responsive">
+               <div id="lab-text-title" >高级Web编程实验室</div>
+               <div id="lab-text-content">每人拥有自己完全独立的编程实验室，内置所有基础软件及学习素材。打开浏览器，即刻开始编程！</div>
+               <button class="btn btn-primary" type="button" id="learnmore">了解更多</button>
+               <br></br>
+            </div>
+         </div>
+
+
+      </div>
+      <div id="twostudy" class="container-fluid">
+         <div class="container">         
+            <img src="./img-screens@2x.png" class="img-responsive">
+            <div id="twostudy-title">双屏学习</div>
+            <div id="twostudy-content">双屏学习，小屏视频互动，大屏实际操作，学习无障碍。打开 浏览器，即刻开始编程！</div>
+            <button class="btn btn-primary" type="button" id="learnmore">了解更多</button></div>
+      </div>
+      <div class="container-fluid">
+         <div class="container">
+            <br></br>
+            <div id="course-title">课程特色</div>
+            <hr class="divider border-info">
+            <span>
+            <div id="icon1-backgroud">           
+               <svg class="bi bi-collection" width="6em" height="6em" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg" id="icon1">
+                  <path fill-rule="evenodd" d="M14.5 13.5h-13A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5zm-13 1A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+                </svg>
+                  <div id="icon1-text">丰富的教学服务</div>
+                  <span id="icon1-content">特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。</span>
+            </span>
+            </div>
+            <div class="row">
+               <a href="" id="learn">马上学习 ></a>
+            </div>
+
+            <br></br>
+            <div id="icon1-backgroud">           
+               <svg class="bi bi-person-circle" width="6em" height="6em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
+                  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg>
+               <div id="icon1-text">多元的学习方式</div>
+               <span id="icon1-content">知识提炼、答疑解惑、实时互动、开发有特色的教学服务方式。</span>
+         </span>
+         </div>
+         <div class="row">
+            <a href="" id="learn">马上学习 ></a>
+         </div>
+         <br></br>
+         <div id="icon1-backgroud">           
+            <svg class="bi bi-columns-gap" width="6em" height="6em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
+               <path fill-rule="evenodd" d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+             </svg>
+            <div id="icon1-text">高品质的学习体验</div>
+            <span id="icon1-content">多屏合一，随时学习，随时在线，学习记录一目了然，知识充电不再受限。</span>
+      </span>
+      </div>
+      <div class="row">
+         <a href="" id="learn">马上学习 ></a>
+      </div>
+         </div>
+      </div>
+      <br></br>
+    </div>
+    <footer id="footer">
+      <div class="container text-center">
+         <br></br>
+        <large class="text-muted"> &copy; 2024 云端科技 Artech All rights reserved</large>
+      </div>
+    </footer>
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需 要引入 jQuery) -->
+      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </body>
+</html>
