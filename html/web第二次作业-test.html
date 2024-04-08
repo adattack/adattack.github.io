@@ -15,10 +15,10 @@
                 max-width: 100%; 
                 overflow-x: hidden;
             }
-            #bg {
+            /* #bg { */
             /* background:url(https://img2.imgtp.com/2024/03/21/MtgVGTD9.jpg) no-repeat center fixed; */
             /* background-size:contain */
-            }
+            /* } */
             #head{
                background-image: url(https://img2.imgtp.com/2024/03/21/MtgVGTD9.jpg) ;
                /* background-repeat:no-repeat; */
@@ -32,7 +32,7 @@
             #startwords1{
                 z-index: 1;
                 color: white;
-                font-size: 80px;
+                font-size: 60px;
                 /* top:30% */
             }
             #loginbtn{
@@ -63,7 +63,7 @@
                 /* left: 30%; */
                 /* top: 50%; */
                 color: white;
-                font-size: 40px;
+                font-size: 30px;
             }
             #svg{
                 position: absolute;
@@ -117,10 +117,10 @@
             }
             #icon1-backgroud{
                 background-color: rgb(98, 169, 245);
-                width:7em; 
-                height:7em;
+                width:6em; 
+                height:6em;
                 border-radius: 10px;
-                left: 30%;
+                left: 35%;
             }
             #icon1{
                /* position: absolute; */
@@ -135,7 +135,7 @@
             #icon1-text{
                 /* position: absolute; 
                 left: 20%; */
-                font:bold 40px Arial;
+                font:bold 30px Arial;
             }
             #icon1-content{
                 /* position: absolute; 
@@ -163,12 +163,10 @@
       <img id="svg" src="https://img2.imgtp.com/2024/03/21/A7Vaqna3.svg" class="img-responsive"> 
     <div id="head" class="container-fluid">
       <div class="row">
-         <div class="col-1 offset-10">
-         <button type="button" id="registerbtn"  class="btn btn-default">注册</button>
-         </div>      
-         <div class="col-1">
-         <button type="button" id="loginbtn" class="btn btn-default">登陆</button>
-         </div>
+         <div class="d-flex justify-content-end">
+            <button class="btn btn-primary me-2" id="registerbtn">注册</button>
+            <button class="btn btn-primary" id="loginbtn">登陆</button>
+          </div>
       </div>
       <div class="row">
       </div>
@@ -230,64 +228,74 @@
 <!--1-->
 <div class="container-fluid">
    <br></br>
-   <div class="row">
-      <div class="col-2 offset-1">
-         <div id="icon1-backgroud">           
-            <svg class="bi bi-collection" width="6em" height="6em" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg" id="icon1">
-               <path fill-rule="evenodd" d="M14.5 13.5h-13A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5zm-13 1A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
-             </svg>
+   <div class="d-flex justify-content-start">
+      <div class="row">
+         <div class="col-1 offset-1">
+            <div id="icon1-backgroud">           
+               <svg class="bi bi-collection" width="5em" height="5em" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg " id="icon1">
+                  <path fill-rule="evenodd" d="M14.5 13.5h-13A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5zm-13 1A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+                </svg>
+            </div>
+         </div>
+         <div class="col-7 offset-3">
+            <div id="icon1-text">丰富的教学服务</div>
+            <span id="icon1-content">特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。</span>
+         </div>
+         <div class="row2 offset-2" >
+            <a href="" id="learn">马上学习 ></a>
          </div>
       </div>
-      <div class="col-6">
-         <div id="icon1-text">丰富的教学服务</div>
-         <span id="icon1-content">特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。</span>
-      </div>
    </div>
-   <div class="row offset-1" >
-      <a href="" id="learn">马上学习 ></a>
-   </div>
+
 </div>
 <!--2-->
 <div class="container-fluid">
    <br></br>
-   <div class="row">
-      <div class="col-2 offset-1">
-         <div id="icon1-backgroud">           
-            <svg class="bi bi-person-circle" width="6em" height="6em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
-               <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-               <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-               <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-             </svg>
+   <div class="d-flex justify-content-start">
+      <div class="row">
+         <div class="col-1 offset-1">
+            <div id="icon1-backgroud">           
+               <svg class="bi bi-person-circle" width="5em" height="5em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
+                  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg>
+            </div>
+         </div>
+         <div class="col-7 offset-3">
+            <div id="icon1-text">多元的学习方式</div>
+            <span id="icon1-content">特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。</span>
+
+         </div>
+         <div class="row2 offset-2" >
+            <a href="" id="learn">马上学习 ></a>
          </div>
       </div>
-      <div class="col-6">
-         <div id="icon1-text">多元的学习方式</div>
-         <span id="icon1-content">特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。</span>
-      </div>
    </div>
-   <div class="row offset-1" >
-      <a href="" id="learn">马上学习 ></a>
-   </div>
+
 </div>
 <!--3-->
 <div class="container-fluid">
    <br></br>
-   <div class="row">
-      <div class="col-2 offset-1">
-         <div id="icon1-backgroud">           
-            <svg class="bi bi-columns-gap" width="6em" height="6em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
-               <path fill-rule="evenodd" d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
-             </svg>
+   <div class="d-flex justify-content-start">
+      <div class="row">
+         <div class="col-1 offset-1">
+            <div id="icon1-backgroud">           
+               <svg class="bi bi-columns-gap" width="5em" height="5em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" id="icon2">
+                  <path fill-rule="evenodd" d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+                </svg>
+            </div>
+         </div>
+         <div class="col-7 offset-3">
+            <div id="icon1-text">高品质的学习体验</div>
+            <span id="icon1-content">多屏合一，随时学习，随时在线，学习记录一目了然，知识充电不再受限。</span>
+         </div>
+         <div class="row2 offset-2" >
+            <a href="" id="learn">马上学习 ></a>
          </div>
       </div>
-      <div class="col-6">
-         <div id="icon1-text">高品质的学习体验</div>
-         <span id="icon1-content">多屏合一，随时学习，随时在线，学习记录一目了然，知识充电不再受限。</span>
-      </div>
    </div>
-   <div class="row offset-1" >
-      <a href="" id="learn">马上学习 ></a>
-   </div>
+
 </div>
 <br></br>
 <br></br>
